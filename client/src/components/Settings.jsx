@@ -1,12 +1,14 @@
 import i18next from 'i18next';
 import React from 'react'
-
+import IMAGES from '../images/Images'
+import  '../App.css'
 function Settings() {
 
   const handleClick=(e)=>{
     i18next.changeLanguage(e.target.value)
   }
   return (
+    <div>   
     <div className="settings">
     <h2>Settings</h2>
     <div>
@@ -21,6 +23,14 @@ function Settings() {
       </select>
     </div>
   </div>
+  <div>
+    <div className="page-container">
+      <img src={IMAGES.image5} alt="Home" className="full-screen-image" />
+      <div className="top-shadow-overlay"></div>
+    </div>
+   </div>
+  </div>
+
   )
 }
 
